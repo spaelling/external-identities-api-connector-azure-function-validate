@@ -19,7 +19,7 @@ namespace Sample.ExternalIdentities
             ILogger log)
         {
             // Allowed domains
-            string[] allowedDomain = { "fabrikam.com", "fabricam.com" };
+            string[] allowedDomain = { "egmont.com", "powercon.dk" };
 
             // Check HTTP basic authorization
             if (!Authorize(req, log))
@@ -68,7 +68,8 @@ namespace Sample.ExternalIdentities
 
             // Input validation passed successfully, return `Allow` response.
             // TO DO: Configure the claims you want to return
-            return (ActionResult)new OkObjectResult(new ResponseContent() { 
+            return (ActionResult)new OkObjectResult(new ResponseContent()
+            {
                 jobTitle = "This value return by the API Connector"//,
                 // You can also return custom claims using extension properties.
                 //extension_CustomClaim = "my custom claim response"
