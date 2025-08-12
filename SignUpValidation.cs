@@ -18,7 +18,7 @@ namespace Sample.ExternalIdentities
         {
             var log = executionContext.GetLogger("SignUpValidation");
             // Allowed domains
-            string[] allowedDomain = { "egmont.com", "powercon.dk" };
+            string[] allowedDomain = ["egmont.com", "powercon.dk"];
 
             // Check HTTP basic authorization
             if (!Authorize(req, log))
