@@ -63,7 +63,7 @@ namespace Sample.ExternalIdentities
             if (!allowedDomain.Contains(domain.ToLower()))
             {
                 var response = req.CreateResponse(System.Net.HttpStatusCode.OK);
-                await response.WriteStringAsync(JsonConvert.SerializeObject(new ResponseContent("ShowBlockPage", $"You must have an account from '{string.Join(", ", allowedDomain)}' to register as an external user for Contoso.")));
+                await response.WriteStringAsync(JsonConvert.SerializeObject(new ResponseContent("ShowBlockPage", $"You must have an account from '{string.Join(", ", allowedDomain)}' to register as an external user for 'Egmont resource tenant'.")));
                 return response;
             }
 
